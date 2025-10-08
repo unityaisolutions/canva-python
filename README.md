@@ -16,8 +16,8 @@ The REST API documentation can be found on [community.canva.dev](https://communi
 ## Installation
 
 ```sh
-# install from this staging repo
-pip install git+ssh://git@github.com/stainless-sdks/canva-python.git
+# install from the production repo
+pip install git+ssh://git@github.com/unityaisolutions/canva-python.git
 ```
 
 > [!NOTE]
@@ -81,8 +81,8 @@ By default, the async client uses `httpx` for HTTP requests. However, for improv
 You can enable this by installing `aiohttp`:
 
 ```sh
-# install from this staging repo
-pip install 'canva[aiohttp] @ git+ssh://git@github.com/stainless-sdks/canva-python.git'
+# install from the production repo
+pip install 'canva[aiohttp] @ git+ssh://git@github.com/unityaisolutions/canva-python.git'
 ```
 
 Then you can enable it by instantiating the client with `http_client=DefaultAioHttpClient()`:
@@ -275,9 +275,9 @@ app = response.parse()  # get the object that `apps.retrieve_jwks()` would have 
 print(app.keys)
 ```
 
-These methods return an [`APIResponse`](https://github.com/stainless-sdks/canva-python/tree/main/src/canva/_response.py) object.
+These methods return an [`APIResponse`](https://github.com/unityaisolutions/canva-python/tree/main/src/canva/_response.py) object.
 
-The async client returns an [`AsyncAPIResponse`](https://github.com/stainless-sdks/canva-python/tree/main/src/canva/_response.py) with the same structure, the only difference being `await`able methods for reading the response content.
+The async client returns an [`AsyncAPIResponse`](https://github.com/unityaisolutions/canva-python/tree/main/src/canva/_response.py) with the same structure, the only difference being `await`able methods for reading the response content.
 
 #### `.with_streaming_response`
 
@@ -383,7 +383,7 @@ This package generally follows [SemVer](https://semver.org/spec/v2.0.0.html) con
 
 We take backwards-compatibility seriously and work hard to ensure you can rely on a smooth upgrade experience.
 
-We are keen for your feedback; please open an [issue](https://www.github.com/stainless-sdks/canva-python/issues) with questions, bugs, or suggestions.
+We are keen for your feedback; please open an [issue](https://www.github.com/unityaisolutions/canva-python/issues) with questions, bugs, or suggestions.
 
 ### Determining the installed version
 
