@@ -1,0 +1,12 @@
+# File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
+
+from typing import List, Optional
+from typing_extensions import Literal
+
+from ..._models import BaseModel
+
+__all__ = ["MeListCapabilitiesResponse"]
+
+
+class MeListCapabilitiesResponse(BaseModel):
+    capabilities: Optional[List[Literal["autofill", "brand_template", "resize"]]] = None
