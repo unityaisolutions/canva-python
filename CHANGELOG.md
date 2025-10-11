@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.0.3 (2025-10-11)
+
+Full Changelog: [v0.0.2...v0.0.3](https://github.com/unityaisolutions/canva-python/compare/v0.0.2...v0.0.3)
+
+### Chores
+
+* **internal:** detect missing future annotations with ruff ([de94798](https://github.com/unityaisolutions/canva-python/commit/de94798d58cadcb2a8c44ea637fa03ad5b734bb5))
+
 ## 0.0.2 (2025-10-08)
 
 Full Changelog: [v0.0.1...v0.0.2](https://github.com/unityaisolutions/canva-python/compare/v0.0.1...v0.0.2)
