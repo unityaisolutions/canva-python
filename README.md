@@ -3,7 +3,7 @@
 <!-- prettier-ignore -->
 [![PyPI version](https://img.shields.io/pypi/v/canva.svg?label=pypi%20(stable))](https://pypi.org/project/canva/)
 
-The Canva Python library provides convenient access to the Canva REST API from any Python 3.8+
+The Canva Python library provides convenient access to the Canva REST API from any Python 3.9+
 application. The library includes type definitions for all request params and response fields,
 and offers both synchronous and asynchronous clients powered by [httpx](https://github.com/encode/httpx).
 
@@ -88,6 +88,7 @@ pip install 'canva[aiohttp] @ git+ssh://git@github.com/unityaisolutions/canva-py
 Then you can enable it by instantiating the client with `http_client=DefaultAioHttpClient()`:
 
 ```python
+import os
 import asyncio
 from canva import DefaultAioHttpClient
 from canva import AsyncCanva
@@ -95,8 +96,8 @@ from canva import AsyncCanva
 
 async def main() -> None:
     async with AsyncCanva(
-        username="My Username",
-        password="My Password",
+        username=os.environ.get("CANVA_USERNAME"),  # This is the default and can be omitted
+        password=os.environ.get("CANVA_PASSWORD"),  # This is the default and can be omitted
         http_client=DefaultAioHttpClient(),
     ) as client:
         response = await client.apps.retrieve_jwks(
@@ -398,7 +399,7 @@ print(canva.__version__)
 
 ## Requirements
 
-Python 3.8 or higher.
+Python 3.9 or higher.
 
 ## Contributing
 
